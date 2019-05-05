@@ -1,3 +1,4 @@
+## Moving Average from Data Stream
 """
 1. initialize a None list with given length
 2. if first element in, assign to 0 position, sum += value, num ++
