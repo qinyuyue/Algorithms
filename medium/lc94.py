@@ -1,4 +1,4 @@
-## Binary Tree inorder Traversal 
+## Binary Tree inorder Traversal
 
 # Definition for a binary tree node.
 # class TreeNode:
@@ -49,4 +49,18 @@ class Solution:
                 node = stack.pop(-1)
                 output.append(node.val)
 
+        return output
+# faster, and no need visited 
+        output = []
+        stack = []
+        node = root
+        while stack or node:
+            # go to the most left one
+            while node:
+                stack.append(node)
+                node = node.left
+
+            node = stack[-1]
+            output.append(stack.pop().val)
+            node = node.right
         return output
