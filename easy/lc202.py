@@ -2,6 +2,9 @@
 
 class Solution:
     def isHappy(self, n: int) -> bool:
+        """
+        Algorithm - Hashset
+        """
         if type(n) is int:
             visited = set()
             visited.add(n)
